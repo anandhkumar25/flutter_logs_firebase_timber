@@ -1,5 +1,6 @@
 name: flutter_logs_firebase_timber
-description: "A new Flutter package project."
+description: "FlutterFirebaseLogs is a logging package for Flutter, similar to Android's Timber.
+ This package allows you to track logs both locally and remotely using Firebase Realtime Database."
 version: 0.0.1
 homepage: https://github.com/anandhkumar25/flutter_logs_firebase_timber
 

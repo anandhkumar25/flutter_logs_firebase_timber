@@ -19,7 +19,7 @@ FlutterFirebaseLogs is a logging package for Flutter, similar to Android's Timbe
 - Monitor application logs in the Firebase console.
 - Easy to use.
 - Realtime database screenshot:
-![Realtime firebase logs](screenshots/flutter_firebase_logs.png)
+![Realtime firebase logs](screenshots/flutter_logs_firebase_timber.png)
 
 
 ## Getting started

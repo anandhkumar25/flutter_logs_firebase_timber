@@ -11,29 +11,78 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages).
 -->
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+FlutterFirebaseLogs is a logging package for Flutter, similar to Android's Timber. This package allows you to track logs both locally and remotely using Firebase Realtime Database.
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+- Track logs remotely and locally.
+- Monitor application logs in the Firebase console.
+- Easy to use.
+- Realtime database screenshot:
+![Realtime firebase logs](screenshots/flutter_firebase_logs.png)
+
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+Add the package to your pubspec.yaml file:
+
+## Firebase Setup
+
+- Create a Firebase project in the [Firebase console](https://console.firebase.google.com).
+- Register your app by clicking the Flutter icon in the Project Overview section.
+- Follow the given instructions for CLI setup.
+
+## A. Configure Firebase Realtime Database rules for public read and write access:
+
+1. Select your Firebase project.
+2. Navigate to Realtime Database:
+- Click on "Build" in the left-hand menu, then select "Realtime Database".
+3. Open the Rules Tab:
+- Click on the "Rules" tab in the Realtime Database section.
+4. Set Public Read and Write Access:
+- Replace the existing rules with the following code to allow public read and write access. Note that setting public access is generally not recommended for production applications due to security risks. Use this configuration only for testing or development purposes.
+
+{
+  "rules": {
+    ".read": "true",
+    ".write": "true"
+  }
+}
+
+5. Click the "Publish" button to apply the changes.
+
+## Important Note:
+- Setting .read and .write to true allows anyone with the database URL to read and write data, posing significant security risks. For production environments, implement proper security rules to protect your data. For example, allow access only to authenticated users:
+
+{
+  "rules": {
+
+    ".read": "auth != null",
+
+    ".write": "auth != null"
+
+  }
+}
+
+## Example
+
+void main() async {
+
+  WidgetsFlutterBinding.ensureInitialized();
+
+  //Initialze the package only for debug mode
+
+  if (kDebugMode) {
+    await FlutterFirebaseLogs.initialize();
+  }
+
+  runApp(const MyApp());
+}
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
-
-```dart
-const like = 'sample';
-```
+FlutterFirebaseLogs.log(LogLevel.info, "onClickLogin()", "This is a log message", null)
 
 ## Additional information
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+We hope you find FlutterFirebaseLogs useful!

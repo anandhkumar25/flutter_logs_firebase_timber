@@ -174,10 +174,8 @@ class _GetStackTrace {
   _GetStackTrace(this._trace) {
     var traceString = _trace.toString().split("\n")[3];
     var indexOfFileName = traceString.indexOf(RegExp(r'[A-Za-z_]+\.dart'));
-    var fileInfo = traceString.substring(indexOfFileName);
-    var listOfInfos = fileInfo.split(":");
-    fullFileName = listOfInfos[0];
-    fileName = fullFileName.replaceAll('.dart', '');
+    var listOfInfos = traceString.substring(indexOfFileName).split(":");
+    fileName = listOfInfos[0].replaceAll('.dart', '');
     lineNumber = int.parse(listOfInfos[1]);
     columnNumber = int.parse(listOfInfos[2].replaceFirst(")", ""));
   }

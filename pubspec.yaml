@@ -1,6 +1,6 @@
 name: flutter_logs_firebase_timber
 description: "FlutterLogsFirebaseTimber is a logging package for Flutter, similar to Android's Timber."
-version: 0.0.2
+version: 0.0.3
 homepage: https://github.com/anandhkumar25/flutter_logs_firebase_timber
 repository: https://github.com/anandhkumar25/flutter_logs_firebase_timber.git
 issue_tracker: https://github.com/anandhkumar25/flutter_logs_firebase_timber/issues
@@ -8,6 +8,11 @@ issue_tracker: https://github.com/anandhkumar25/flutter_logs_firebase_timber/iss
 environment:
   sdk: '>=3.4.0 <4.0.0'
   flutter: ">=1.17.0"
+
+# Specify the supported platforms
+platforms:
+  android:
+  ios:
 
 dependencies:
   flutter:

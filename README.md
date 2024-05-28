@@ -75,30 +75,26 @@ flutter_logs_firebase_timber 0.0.1
 
 ## Example
 
+```dart
 void main() async {
-
   WidgetsFlutterBinding.ensureInitialized();
-
   //Initialze the package only for debug mode
-
   if (kDebugMode) {
-
     await FlutterLogsFirebaseTimber.initialize();
-
   }
-
   runApp(const MyApp());
-
 }
+```
 
 ## Usage
 
+```dart
 FlutterLogsFirebaseTimber.log(
                 logLevel: LogLevel.info,
                 tag: "onPressed()",
                 message: "This is a log message",
                 error: null)
-
+```
 
 ## Additional information
 

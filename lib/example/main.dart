@@ -36,6 +36,7 @@ class MyHomePage extends StatelessWidget {
       body: Center(
         child: ElevatedButton(
           onPressed: () => {
+            // Log a message using FlutterLogsFirebaseTimber
             FlutterLogsFirebaseTimber.log(
                 logLevel: LogLevel.info,
                 tag: "onPressed()",

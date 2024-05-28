@@ -11,7 +11,7 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages).
 -->
 
-FlutterFirebaseLogs is a logging package for Flutter, similar to Android's Timber. This package allows you to track logs both locally and remotely using Firebase Realtime Database.
+FlutterLogsFirebaseTimber is a logging package for Flutter, similar to Android's Timber. This package allows you to track logs both locally and remotely using Firebase Realtime Database.
 
 ## Features
 
@@ -74,7 +74,7 @@ void main() async {
   //Initialze the package only for debug mode
 
   if (kDebugMode) {
-    await FlutterFirebaseLogs.initialize();
+    await FlutterLogsFirebaseTimber.initialize();
   }
 
   runApp(const MyApp());
@@ -82,8 +82,8 @@ void main() async {
 
 ## Usage
 
-FlutterFirebaseLogs.log(LogLevel.info, "onClickLogin()", "This is a log message", null)
+FlutterLogsFirebaseTimber.log(LogLevel.info, "onClickLogin()", "This is a log message", null)
 
 ## Additional information
 
-We hope you find FlutterFirebaseLogs useful!
+We hope you find FlutterLogsFirebaseTimber useful!

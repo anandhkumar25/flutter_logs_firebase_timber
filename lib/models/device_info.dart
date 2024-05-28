@@ -66,6 +66,6 @@ class DeviceInfo {
 
   @override
   String toString() {
-    return 'DeviceDetails(deviceId: $deviceId, deviceName: $deviceName, deviceBrand: $deviceBrand, osVersion: $osVersion, manufacturer: $manufacturer, model: $model, appVersionName: $appVersionName, appVersionCode: $appVersionCode)';
+    return 'DeviceInfo(deviceId: $deviceId, deviceName: $deviceName, deviceBrand: $deviceBrand, osVersion: $osVersion, manufacturer: $manufacturer, model: $model, appVersionName: $appVersionName, appVersionCode: $appVersionCode)';
   }
 }

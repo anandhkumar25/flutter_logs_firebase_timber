@@ -1,8 +1,8 @@
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/foundation.dart';
-import 'package:flutter_logs_firebase_timber/remote/remotelog.dart';
+import 'package:flutter_logs_firebase_timber/remote/remote_log.dart';
 import 'package:intl/intl.dart';
-import '../models/devicedetails.dart';
+import '../models/device_info.dart';
 
 class LogsTree {
   final DeviceInfo deviceInfo;

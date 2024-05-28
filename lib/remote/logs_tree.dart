@@ -16,7 +16,8 @@ class LogsTree {
             .ref()
             .child('logs')
             .child(DateFormat('dd-MM-yyyy').format(DateTime.now()))
-            .child(deviceInfo.deviceId.replaceAll(".", "_"));
+            .child(deviceInfo.deviceId?.replaceAll(".", "_") ??
+                deviceInfo.deviceName);
 
   /// - Parameters:
   ///   - logLevel: The level of the log message (e.g., verbose, debug, info, warning, error).

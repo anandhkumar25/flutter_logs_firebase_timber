@@ -2,8 +2,9 @@ import 'package:device_info_plus/device_info_plus.dart';
 import 'package:flutter/foundation.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 
+/// A class representing the device and application information.
 class DeviceInfo {
-  final String deviceId;
+  final String? deviceId;
   final String deviceName;
   final String deviceBrand;
   final String osVersion;
@@ -12,6 +13,7 @@ class DeviceInfo {
   final String appVersionName;
   final int appVersionCode;
 
+  /// Creates an instance of [DeviceInfo] with the given properties.
   DeviceInfo({
     required this.deviceId,
     required this.deviceName,
@@ -23,9 +25,14 @@ class DeviceInfo {
     required this.appVersionCode,
   });
 
+  /// Asynchronously creates an instance of [DeviceInfo] by fetching
+  /// the device and application information.
+  ///
+  /// Supports both Android and iOS platforms.
   static Future<DeviceInfo> create() async {
     var deviceInfo = DeviceInfoPlugin();
     var packageInfo = await PackageInfo.fromPlatform();
+
     if (defaultTargetPlatform == TargetPlatform.android) {
       var androidInfo = await deviceInfo.androidInfo;
       return DeviceInfo(
@@ -41,8 +48,8 @@ class DeviceInfo {
     } else {
       var iOSDeviceInfo = await deviceInfo.iosInfo;
       return DeviceInfo(
-        deviceId: iOSDeviceInfo.name,
-        deviceName: iOSDeviceInfo.localizedModel,
+        deviceId: iOSDeviceInfo.identifierForVendor,
+        deviceName: iOSDeviceInfo.name,
         deviceBrand: iOSDeviceInfo.name,
         osVersion: iOSDeviceInfo.systemVersion,
         manufacturer: iOSDeviceInfo.systemName,
@@ -53,6 +60,7 @@ class DeviceInfo {
     }
   }
 
+  /// Converts the [DeviceInfo] instance to a JSON object.
   Map<String, dynamic> toJson() => {
         'deviceId': deviceId,
         'deviceName': deviceName,

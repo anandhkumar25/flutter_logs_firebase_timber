@@ -10,3 +10,7 @@
 * Add named parameters.
 * Bug fixes.
 * Add support exclusively for Android and iOS platforms.
+
+## 0.0.4
+* Add realtime firebase log screenshot.
+* Fix minor issues.

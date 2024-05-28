@@ -20,7 +20,7 @@ FlutterLogsFirebaseTimber is a logging package for Flutter, similar to Android's
 - Easy to use.
 - Realtime database screenshot:
 
-![Realtime firebase logs](screenshots/flutter_logs_firebase_timber.png)
+![Realtime firebase logs](https://github.com/anandhkumar25/flutter_logs_firebase_timber/blob/main/screenshots/flutter_logs_firebase_timber.png?raw=true)
 
 
 ## Getting started

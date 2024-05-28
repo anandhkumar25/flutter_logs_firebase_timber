@@ -26,7 +26,9 @@ FlutterLogsFirebaseTimber is a logging package for Flutter, similar to Android's
 ## Getting started
 
 Add the package to your pubspec.yaml file:
-flutter_logs_firebase_timber 0.0.1
+```dart
+  flutter_logs_firebase_timber: ^0.0.3
+```
 
 ## Firebase Setup
 

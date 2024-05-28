@@ -100,7 +100,6 @@ void w(String message) => _consoleLogcat(LogLevel.warning, message);
 void e(String message, {dynamic error, StackTrace? stackTrace}) =>
     _consoleLogcat(LogLevel.error, message, error, stackTrace);
 
-
 void onMessage(
   LogLevel logLevel,
   String message, {

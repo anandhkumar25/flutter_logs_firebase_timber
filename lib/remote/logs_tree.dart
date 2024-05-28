@@ -72,16 +72,34 @@ void _consoleLogcat(LogLevel logLevel, String message,
   onMessage(logLevel, message, error: error, stackTrace: stackTrace);
 }
 
+/// Logs a verbose message.
+///
+/// [message]: The message to log.
 void v(String message) => _consoleLogcat(LogLevel.verbose, message);
 
+/// Logs a debug message.
+///
+/// [message]: The message to log.
 void d(String message) => _consoleLogcat(LogLevel.debug, message);
 
+/// Logs an informational message.
+///
+/// [message]: The message to log.
 void i(String message) => _consoleLogcat(LogLevel.info, message);
 
+/// Logs a warning message.
+///
+/// [message]: The message to log.
 void w(String message) => _consoleLogcat(LogLevel.warning, message);
 
+/// Logs an error message.
+///
+/// [message]: The message to log.
+/// [error]: Optional error associated with the log message.
+/// [stackTrace]: Optional stack trace associated with the error.
 void e(String message, {dynamic error, StackTrace? stackTrace}) =>
     _consoleLogcat(LogLevel.error, message, error, stackTrace);
+
 
 void onMessage(
   LogLevel logLevel,

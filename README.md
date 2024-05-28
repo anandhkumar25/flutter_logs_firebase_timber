@@ -45,10 +45,15 @@ flutter_logs_firebase_timber 0.0.1
 - Replace the existing rules with the following code to allow public read and write access. Note that setting public access is generally not recommended for production applications due to security risks. Use this configuration only for testing or development purposes.
 
 {
+
   "rules": {
+
     ".read": "true",
+
     ".write": "true"
+
   }
+
 }
 
 5. Click the "Publish" button to apply the changes.
@@ -57,29 +62,43 @@ flutter_logs_firebase_timber 0.0.1
 - Setting .read and .write to true allows anyone with the database URL to read and write data, posing significant security risks. For production environments, implement proper security rules to protect your data. For example, allow access only to authenticated users:
 
 {
+
   "rules": {
+
     ".read": "auth != null",
+
     ".write": "auth != null"
+
   }
+
 }
 
 ## Example
 
 void main() async {
+
   WidgetsFlutterBinding.ensureInitialized();
 
-  // Initialize the package only for debug mode
+  //Initialze the package only for debug mode
+
   if (kDebugMode) {
+
     await FlutterLogsFirebaseTimber.initialize();
+
   }
 
   runApp(const MyApp());
-}
 
+}
 
 ## Usage
 
-FlutterLogsFirebaseTimber.log(LogLevel.info, "onClickLogin()", "This is a log message", null)
+FlutterLogsFirebaseTimber.log(
+                logLevel: LogLevel.info,
+                tag: "onPressed()",
+                message: "This is a log message",
+                error: null)
+
 
 ## Additional information
 

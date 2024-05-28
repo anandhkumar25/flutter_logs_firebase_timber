@@ -23,7 +23,10 @@ class FlutterLogsFirebaseTimber {
   ///
   /// This method uses the initialized [LogsTree] to log the message.
   static void log(
-      LogLevel logLevel, String tag, String message, dynamic error) {
+      {required LogLevel logLevel,
+      required String tag,
+      required String message,
+      required dynamic error}) {
     _logTree?.log(logLevel, tag, message, error);
   }
 }

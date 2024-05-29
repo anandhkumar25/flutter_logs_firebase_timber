@@ -14,3 +14,8 @@
 ## 0.0.4
 * Add realtime firebase log screenshot.
 * Fix minor issues.
+
+## 0.0.5
+* Add local loggers.
+* Add package setups in readme file
+* Some improvement

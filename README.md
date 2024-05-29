@@ -91,7 +91,7 @@ flutter pub get
 Initializes the FlutterLogsFirebaseTimber package.This method should be called once during the application startup.
 
 ```dart
-await FlutterLogsFirebaseTimber.initialize();
+await RemoteLogger.initialize();
 ```
 
 - To perform asynchronous operations before the runApp() method is called, such as initializing a database or fetching initial configuration settings, you should ensures that the binding between the Flutter framework and the underlying platform (such as iOS or Android) is fully initialized at the beginning of the main() function.
@@ -99,7 +99,7 @@ await FlutterLogsFirebaseTimber.initialize();
 ```dart
 WidgetsFlutterBinding.ensureInitialized();
 ```
-- Asynchronously initializes for FlutterLogsFirebaseTimber.
+- Asynchronously initializes for RemoteLogger.
 
 ```dart
 void main() async {
@@ -107,7 +107,7 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   //Initialze the package only for debug mode
   if (kDebugMode) {
-    await FlutterLogsFirebaseTimber.initialize();
+    await RemoteLogger.initialize();
   }
   runApp(const MyApp());
 }
@@ -115,10 +115,10 @@ void main() async {
 
 ## Usage
 
-This is a static method call to the log function of the FlutterLogsFirebaseTimber class providing functionality to send log messages to a logging service on Firebase.
+This is a static method call to the log function of the RemoteLogger class providing functionality to send log messages to a logging service on Firebase.
 
 ```dart
-FlutterLogsFirebaseTimber.log(
+RemoteLogger.log(
                 logLevel: LogLevel.info,
                 tag: "onPressed()",
                 message: "This is a log message",

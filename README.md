@@ -39,7 +39,8 @@ flutter pub get
 
 - Create a Firebase project in the [Firebase console](https://console.firebase.google.com).
 - Register your app by clicking the Flutter icon in the Project Overview section.
-![Flutter project icon](/Users/coditas/vscodeprojects/flutter_logs_firebase_timber/screenshots/flutter_project.png)
+
+![Flutter project icon](https://github.com/anandhkumar25/flutter_logs_firebase_timber/blob/main/screenshots/flutter_project.png)
 
 - Follow the given instructions for CLI setup.
 

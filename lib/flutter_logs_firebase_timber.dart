@@ -3,10 +3,10 @@ library flutter_logs_firebase_timber;
 import 'package:flutter_logs_firebase_timber/models/device_info.dart';
 import 'package:flutter_logs_firebase_timber/remote/logs_tree.dart';
 
-class FlutterLogsFirebaseTimber {
+class RemoteLogger {
   static LogsTree? _logTree;
   static DeviceInfo? _deviceInfo;
-  FlutterLogsFirebaseTimber._(); // A private constructor to prevent instantiation.
+  RemoteLogger._(); // A private constructor to prevent instantiation.
 
   /// Initializes the logging system by creating a [DeviceInfo] instance
   /// and a [LogsTree] if they are not already created.

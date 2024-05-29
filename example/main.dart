@@ -8,7 +8,7 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   //Initialze the package only for debug mode
   if (kDebugMode) {
-    await FlutterLogsFirebaseTimber.initialize();
+    await RemoteLogger.initialize();
   }
   runApp(const Example());
 }
@@ -38,7 +38,7 @@ class MyHomePage extends StatelessWidget {
         child: ElevatedButton(
           onPressed: () => {
             // Log a message using FlutterLogsFirebaseTimber
-            FlutterLogsFirebaseTimber.log(
+            RemoteLogger.log(
                 logLevel: LogLevel.info,
                 tag: "onPressed()",
                 message: "This is a log message",

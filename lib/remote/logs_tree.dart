@@ -38,12 +38,12 @@ class LogsTree {
 
       final updates = {
         '-DeviceDetails': deviceInfo.toJson(),
-        now.millisecondsSinceEpoch.toString(): remoteLog.toJson()
+        _getLogEmoji(logLevel) + now.millisecondsSinceEpoch.toString():
+            remoteLog.toJson()
       };
       logRef.update(updates);
-    } else {
-      _consoleLogcat(logLevel, message);
     }
+    _consoleLogcat(logLevel, message, t);
   }
 }
 

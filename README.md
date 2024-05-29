@@ -77,6 +77,8 @@ Add the package to your pubspec.yaml file:
 
 ## Example
 
+Asynchronously initializes the logging system by setting up the DeviceInfo and LogsTree. This should be done before the app starts running to ensure that all logs are captured from the beginning.
+
 ```dart
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -89,6 +91,8 @@ void main() async {
 ```
 
 ## Usage
+
+This is a static method call to the log function of the FlutterLogsFirebaseTimber class providing functionality to send log messages to a logging service like Firebase.
 
 ```dart
 FlutterLogsFirebaseTimber.log(

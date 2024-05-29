@@ -4,6 +4,7 @@ import 'package:flutter_logs_firebase_timber/flutter_logs_firebase_timber.dart';
 import 'package:flutter_logs_firebase_timber/remote/logs_tree.dart';
 
 void main() async {
+  // Ensure that the Flutter framework is initialized
   WidgetsFlutterBinding.ensureInitialized();
   //Initialze the package only for debug mode
   if (kDebugMode) {

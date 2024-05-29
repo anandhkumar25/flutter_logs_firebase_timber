@@ -25,15 +25,22 @@ FlutterLogsFirebaseTimber is a logging package for Flutter, similar to Android's
 
 ## Getting started
 
-Add the package to your pubspec.yaml file:
+- Add the package to your pubspec.yaml file:
 ```dart
   flutter_logs_firebase_timber: ^0.0.3
+```
+- Run the command to fetch all the dependencies listed in your pubspec.yaml file and makes them available in your project.
+
+```dart
+flutter pub get
 ```
 
 ## Firebase Setup
 
 - Create a Firebase project in the [Firebase console](https://console.firebase.google.com).
 - Register your app by clicking the Flutter icon in the Project Overview section.
+![Flutter project icon](/Users/coditas/vscodeprojects/flutter_logs_firebase_timber/screenshots/flutter_project.png)
+
 - Follow the given instructions for CLI setup.
 
 ## A. Configure Firebase Realtime Database rules for public read and write access:
@@ -46,6 +53,7 @@ Add the package to your pubspec.yaml file:
 4. Set Public Read and Write Access:
 - Replace the existing rules with the following code to allow public read and write access. Note that setting public access is generally not recommended for production applications due to security risks. Use this configuration only for testing or development purposes.
 
+```
 {
 
   "rules": {
@@ -57,14 +65,15 @@ Add the package to your pubspec.yaml file:
   }
 
 }
+```
 
 5. Click the "Publish" button to apply the changes.
 
 ## Important Note:
 - Setting .read and .write to true allows anyone with the database URL to read and write data, posing significant security risks. For production environments, implement proper security rules to protect your data. For example, allow access only to authenticated users:
 
+```
 {
-
   "rules": {
 
     ".read": "auth != null",
@@ -74,13 +83,26 @@ Add the package to your pubspec.yaml file:
   }
 
 }
+```
 
 ## Example
 
-Asynchronously initializes the logging system by setting up the DeviceInfo and LogsTree. This should be done before the app starts running to ensure that all logs are captured from the beginning.
+Initializes the FlutterLogsFirebaseTimber package.This method should be called once during the application startup.
+
+```dart
+await FlutterLogsFirebaseTimber.initialize();
+```
+
+- To perform asynchronous operations before the runApp() method is called, such as initializing a database or fetching initial configuration settings, you should ensures that the binding between the Flutter framework and the underlying platform (such as iOS or Android) is fully initialized at the beginning of the main() function.
+
+```dart
+WidgetsFlutterBinding.ensureInitialized();
+```
+- Asynchronously initializes for FlutterLogsFirebaseTimber.
 
 ```dart
 void main() async {
+  // Ensure that the Flutter framework is initialized
   WidgetsFlutterBinding.ensureInitialized();
   //Initialze the package only for debug mode
   if (kDebugMode) {
@@ -92,7 +114,7 @@ void main() async {
 
 ## Usage
 
-This is a static method call to the log function of the FlutterLogsFirebaseTimber class providing functionality to send log messages to a logging service like Firebase.
+This is a static method call to the log function of the FlutterLogsFirebaseTimber class providing functionality to send log messages to a logging service on Firebase.
 
 ```dart
 FlutterLogsFirebaseTimber.log(

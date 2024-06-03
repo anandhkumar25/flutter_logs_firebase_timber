@@ -11,13 +11,13 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages).
 -->
 
-FlutterLogsFirebaseTimber is a logging package for Flutter, similar to Android's Timber. This package allows you to track logs both locally and remotely using Firebase Realtime Database.
+This project utilizes the Timber library for efficient logging across both Android and iOS platforms. Timber provides a lightweight yet powerful logging utility that helps in managing log statements effortlessly. For enhanced remote debugging, we've integrated Firebase, which captures and posts these logs in real-time to the Firebase console. This setup allows for seamless monitoring and debugging of the application, ensuring that critical issues can be identified and resolved promptly. By leveraging Timber's logging capabilities and Firebase's robust cloud infrastructure, we achieve a reliable and scalable remote logging solution, facilitating better maintenance and quicker iterations during the development cycle.
 
 ## Features
 
-- Track logs remotely and locally.
-- Monitor application logs in the Firebase console.
-- Easy to use.
+- Efficiently track logs both remotely and locally, ensuring comprehensive monitoring and analysis capabilities.
+- Seamlessly monitor application logs directly within the Firebase console, providing an integrated and streamlined user experience.
+- Designed with ease of use in mind, it offers an intuitive and accessible interface for users of all technical levels.
 - Realtime database screenshot:
 
 ![Realtime firebase logs](https://github.com/anandhkumar25/flutter_logs_firebase_timber/blob/main/screenshots/flutter_logs_firebase_timber.png?raw=true)
@@ -40,7 +40,7 @@ flutter pub get
 - Create a Firebase project in the [Firebase console](https://console.firebase.google.com).
 - Register your app by clicking the Flutter icon in the Project Overview section.
 
-![Flutter project icon](https://github.com/anandhkumar25/flutter_logs_firebase_timber/blob/main/screenshots/flutter_project.png)
+![Flutter project icon](https://github.com/anandhkumar25/flutter_logs_firebase_timber/blob/main/screenshots/flutter_project.png?raw=true)
 
 - Follow the given instructions for CLI setup.
 

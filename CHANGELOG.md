@@ -19,3 +19,7 @@
 * Add local loggers.
 * Add package setups in readme file
 * Some improvement
+
+## 0.0.5
+* Log feature fixes.
+* Improvemnts

@@ -61,8 +61,6 @@ String _logLevelToString(LogLevel level) {
       return 'WARNING';
     case LogLevel.error:
       return 'ERROR';
-    default:
-      return 'UNKNOWN';
   }
 }
 

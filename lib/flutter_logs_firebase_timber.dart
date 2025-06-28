@@ -1,4 +1,4 @@
-library flutter_logs_firebase_timber;
+library;
 
 import 'package:flutter_logs_firebase_timber/models/device_info.dart';
 import 'package:flutter_logs_firebase_timber/remote/logs_tree.dart';

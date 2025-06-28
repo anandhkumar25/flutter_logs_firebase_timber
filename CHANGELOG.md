@@ -20,6 +20,10 @@
 * Add package setups in readme file
 * Some improvement
 
-## 0.0.5
+## 0.0.6
 * Log feature fixes.
 * Improvemnts
+
+## 0.0.7
+* Dependency version upgrade.
+* Formatting fix
